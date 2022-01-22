@@ -9,11 +9,7 @@ import UIKit
 
 class PhotoCell: UICollectionViewCell {
     
-    @IBOutlet weak var dogImage: UIImageView! {
-        didSet {
-            dogImage.layer.cornerRadius = 15
-        }
-    }
+    @IBOutlet weak var dogImage: UIImageView! 
     
     func configure(with image: String?) {
         DispatchQueue.global().async {

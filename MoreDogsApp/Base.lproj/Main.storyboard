@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fun-Rh-zC1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LEQ-WV-Qkb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,25 +14,25 @@
             <objects>
                 <collectionViewController id="s13-HK-OPo" customClass="PhotosViewController" customModule="MoreDogsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dwi-k8-u6G">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xmq-W1-hdd">
-                            <size key="itemSize" width="128" height="128"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="20" minimumInteritemSpacing="10" id="xmq-W1-hdd">
+                            <size key="itemSize" width="180" height="180"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="15" minY="30" maxX="15" maxY="30"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="eGq-j1-thN" customClass="PhotoCell" customModule="MoreDogsApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <rect key="frame" x="15" y="30" width="180" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ef8-ar-yCE">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pa2-4v-kBk">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
@@ -46,33 +47,62 @@
                             <outlet property="delegate" destination="s13-HK-OPo" id="MtW-XN-lug"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="MoreDogs" id="5zv-ZP-8vm"/>
+                    <navigationItem key="navigationItem" title="MoreDogs" leftItemsSupplementBackButton="YES" id="5zv-ZP-8vm"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uOA-tx-euP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671.01449275362324" y="105.80357142857143"/>
+            <point key="canvasLocation" x="593" y="106"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Det-oI-xLE">
+            <objects>
+                <viewController id="LEQ-WV-Qkb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D9H-PT-1BJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWy-8l-rof">
+                                <rect key="frame" x="93.5" y="423.5" width="227" height="49"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Get More Dogs!!!">
+                                    <color key="titleColor" red="0.36658562531351851" green="0.3287430684693462" blue="0.5047922036082475" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fxX-NJ-223" kind="presentation" id="3p5-kQ-a8X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nd5-hV-cxJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uWy-8l-rof" firstAttribute="centerY" secondItem="D9H-PT-1BJ" secondAttribute="centerY" id="f36-JL-nLR"/>
+                            <constraint firstItem="uWy-8l-rof" firstAttribute="centerX" secondItem="D9H-PT-1BJ" secondAttribute="centerX" id="vch-T7-GHM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHd-65-Yy4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-962.31884057971024" y="105.80357142857143"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="xFJ-PK-3qM">
+        <scene sceneID="BLs-F8-R8S">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fun-Rh-zC1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fxX-NJ-223" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="10B-rg-8uC">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationItem key="navigationItem" id="uou-wx-ST0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e2o-01-PlE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                            <color key="textColor" red="0.38962159805069235" green="0.34766094176392742" blue="0.53298163659793807" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="s13-HK-OPo" kind="relationship" relationship="rootViewController" id="0ta-uV-ulj"/>
+                        <segue destination="s13-HK-OPo" kind="relationship" relationship="rootViewController" id="uEU-Cf-znN"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FpE-yV-3v1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sWN-Av-9wc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239.13043478260872" y="105.80357142857143"/>
+            <point key="canvasLocation" x="-187" y="106"/>
         </scene>
     </scenes>
     <resources>
