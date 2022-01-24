@@ -25,7 +25,7 @@ class PhotosViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoCell
-        if let dog = dogs?.message[indexPath.row] {
+        if let dog = dogs?.message[indexPath.item] {
         cell.configure(with: dog)
         }
         return cell
@@ -41,6 +41,10 @@ class PhotosViewController: UICollectionViewController {
                 print(error)
             }
         }
+    }
+    
+    @IBAction func repeatButton(_ sender: UIBarButtonItem) {
+        fetchDogs()
     }
     
 }

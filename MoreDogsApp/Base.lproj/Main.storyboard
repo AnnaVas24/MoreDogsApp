@@ -12,9 +12,9 @@
         <!--MoreDogs-->
         <scene sceneID="AtK-Je-bq1">
             <objects>
-                <collectionViewController id="s13-HK-OPo" customClass="PhotosViewController" customModule="MoreDogsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController modalPresentationStyle="fullScreen" id="s13-HK-OPo" customClass="PhotosViewController" customModule="MoreDogsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dwi-k8-u6G">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="20" minimumInteritemSpacing="10" id="xmq-W1-hdd">
@@ -31,7 +31,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pa2-4v-kBk">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pa2-4v-kBk">
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -47,7 +47,14 @@
                             <outlet property="delegate" destination="s13-HK-OPo" id="MtW-XN-lug"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="MoreDogs" leftItemsSupplementBackButton="YES" id="5zv-ZP-8vm"/>
+                    <navigationItem key="navigationItem" title="MoreDogs" leftItemsSupplementBackButton="YES" id="5zv-ZP-8vm">
+                        <barButtonItem key="rightBarButtonItem" image="repeat" catalog="system" id="y7F-Fj-AIa">
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="repeatButton:" destination="s13-HK-OPo" id="iPx-Fe-LCJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uOA-tx-euP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,11 +95,11 @@
         <!--Navigation Controller-->
         <scene sceneID="BLs-F8-R8S">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fxX-NJ-223" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="fxX-NJ-223" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="uou-wx-ST0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="e2o-01-PlE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -106,6 +113,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="repeat" catalog="system" width="128" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
