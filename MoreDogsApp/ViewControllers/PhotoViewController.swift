@@ -21,6 +21,12 @@ class PhotoViewController: UIViewController {
     
 
     @IBAction func shareButton(_ sender: UIButton) {
-        
+      showShareSheet()
+  
+}
+    
+    private func showShareSheet() {
+        let shareSheet = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+        present(shareSheet, animated: true, completion: nil)
     }
 }
