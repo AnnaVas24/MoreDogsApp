@@ -17,6 +17,7 @@
 		51E57C69279C754400DDCE31 /* Dogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E57C68279C754400DDCE31 /* Dogs.swift */; };
 		51E57C6B279C780200DDCE31 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E57C6A279C780200DDCE31 /* NetworkManager.swift */; };
 		51E57C6D279EE34100DDCE31 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E57C6C279EE34100DDCE31 /* ImageCache.swift */; };
+		51E57C76279EF2A600DDCE31 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E57C75279EF2A600DDCE31 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		51E57C68279C754400DDCE31 /* Dogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dogs.swift; sourceTree = "<group>"; };
 		51E57C6A279C780200DDCE31 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		51E57C6C279EE34100DDCE31 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		51E57C75279EF2A600DDCE31 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +66,76 @@
 		51E57C4F279C604800DDCE31 /* MoreDogsApp */ = {
 			isa = PBXGroup;
 			children = (
-				51E57C50279C604800DDCE31 /* AppDelegate.swift */,
-				51E57C52279C604800DDCE31 /* SceneDelegate.swift */,
-				51E57C64279C60B700DDCE31 /* PhotosViewController.swift */,
-				51E57C68279C754400DDCE31 /* Dogs.swift */,
-				51E57C6A279C780200DDCE31 /* NetworkManager.swift */,
-				51E57C6C279EE34100DDCE31 /* ImageCache.swift */,
-				51E57C66279C663C00DDCE31 /* PhotoCell.swift */,
-				51E57C59279C604800DDCE31 /* Assets.xcassets */,
-				51E57C56279C604800DDCE31 /* Main.storyboard */,
-				51E57C5B279C604800DDCE31 /* LaunchScreen.storyboard */,
-				51E57C5E279C604800DDCE31 /* Info.plist */,
+				51E57C73279EF11600DDCE31 /* App */,
+				51E57C70279EF0E100DDCE31 /* ViewControllers */,
+				51E57C71279EF0EE00DDCE31 /* Views */,
+				51E57C6E279EF0C900DDCE31 /* Models */,
+				51E57C6F279EF0D400DDCE31 /* Services */,
+				51E57C74279EF17900DDCE31 /* Sources */,
+				51E57C72279EF0F900DDCE31 /* Storyboards */,
 			);
 			path = MoreDogsApp;
+			sourceTree = "<group>";
+		};
+		51E57C6E279EF0C900DDCE31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				51E57C68279C754400DDCE31 /* Dogs.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		51E57C6F279EF0D400DDCE31 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				51E57C6A279C780200DDCE31 /* NetworkManager.swift */,
+				51E57C6C279EE34100DDCE31 /* ImageCache.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		51E57C70279EF0E100DDCE31 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				51E57C64279C60B700DDCE31 /* PhotosViewController.swift */,
+				51E57C75279EF2A600DDCE31 /* PhotoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		51E57C71279EF0EE00DDCE31 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				51E57C66279C663C00DDCE31 /* PhotoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		51E57C72279EF0F900DDCE31 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				51E57C56279C604800DDCE31 /* Main.storyboard */,
+				51E57C5B279C604800DDCE31 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		51E57C73279EF11600DDCE31 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				51E57C50279C604800DDCE31 /* AppDelegate.swift */,
+				51E57C52279C604800DDCE31 /* SceneDelegate.swift */,
+				51E57C5E279C604800DDCE31 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		51E57C74279EF17900DDCE31 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				51E57C59279C604800DDCE31 /* Assets.xcassets */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +214,7 @@
 				51E57C65279C60B700DDCE31 /* PhotosViewController.swift in Sources */,
 				51E57C51279C604800DDCE31 /* AppDelegate.swift in Sources */,
 				51E57C69279C754400DDCE31 /* Dogs.swift in Sources */,
+				51E57C76279EF2A600DDCE31 /* PhotoViewController.swift in Sources */,
 				51E57C6D279EE34100DDCE31 /* ImageCache.swift in Sources */,
 				51E57C53279C604800DDCE31 /* SceneDelegate.swift in Sources */,
 			);
@@ -306,7 +366,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MoreDogsApp/Info.plist;
+				INFOPLIST_FILE = MoreDogsApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -334,7 +394,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MoreDogsApp/Info.plist;
+				INFOPLIST_FILE = MoreDogsApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

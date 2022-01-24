@@ -39,6 +39,7 @@
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="dogImage" destination="Pa2-4v-kBk" id="6UH-DH-USR"/>
+                                    <segue destination="fWP-7Q-f9f" kind="presentation" identifier="" id="yz2-tv-pMh"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -60,6 +61,50 @@
             </objects>
             <point key="canvasLocation" x="593" y="106"/>
         </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="gB1-9I-1kW">
+            <objects>
+                <viewController id="fWP-7Q-f9f" customClass="PhotoViewController" customModule="MoreDogsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YHC-Rd-nMi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="goN-1i-m43">
+                                <rect key="frame" x="0.0" y="312.5" width="414" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="217" id="bvP-rv-XLQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVY-Jz-aHx">
+                                <rect key="frame" x="144.5" y="746" width="125" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" Tap to Share" image="square.and.arrow.up" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButton:" destination="fWP-7Q-f9f" eventType="touchUpInside" id="UdY-bX-bSD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R4i-hT-PFx"/>
+                        <color key="backgroundColor" red="0.25257413267013984" green="0.22650095818392568" blue="0.3477971971649485" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="RVY-Jz-aHx" firstAttribute="centerX" secondItem="YHC-Rd-nMi" secondAttribute="centerX" id="GAR-Kd-zF0"/>
+                            <constraint firstItem="R4i-hT-PFx" firstAttribute="bottom" secondItem="RVY-Jz-aHx" secondAttribute="bottom" constant="40" id="RSl-aa-TMf"/>
+                            <constraint firstItem="goN-1i-m43" firstAttribute="leading" secondItem="R4i-hT-PFx" secondAttribute="leading" id="ngL-Fb-dne"/>
+                            <constraint firstItem="goN-1i-m43" firstAttribute="centerY" secondItem="YHC-Rd-nMi" secondAttribute="centerY" id="qDs-ss-SMd"/>
+                            <constraint firstItem="R4i-hT-PFx" firstAttribute="trailing" secondItem="goN-1i-m43" secondAttribute="trailing" id="xCF-vv-1ah"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="goN-1i-m43" id="uL1-xz-Lwf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5t-jL-gGl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1328.985507246377" y="105.80357142857143"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="Det-oI-xLE">
             <objects>
@@ -70,6 +115,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWy-8l-rof">
                                 <rect key="frame" x="93.5" y="423.5" width="227" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="z28-8m-18r"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Get More Dogs!!!">
@@ -83,14 +131,14 @@
                         <viewLayoutGuide key="safeArea" id="nd5-hV-cxJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uWy-8l-rof" firstAttribute="centerY" secondItem="D9H-PT-1BJ" secondAttribute="centerY" id="f36-JL-nLR"/>
-                            <constraint firstItem="uWy-8l-rof" firstAttribute="centerX" secondItem="D9H-PT-1BJ" secondAttribute="centerX" id="vch-T7-GHM"/>
+                            <constraint firstItem="uWy-8l-rof" firstAttribute="centerX" secondItem="D9H-PT-1BJ" secondAttribute="centerX" id="Rt5-JD-wtr"/>
+                            <constraint firstItem="uWy-8l-rof" firstAttribute="centerY" secondItem="D9H-PT-1BJ" secondAttribute="centerY" id="qpZ-Jb-CVj"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHd-65-Yy4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-962.31884057971024" y="105.80357142857143"/>
+            <point key="canvasLocation" x="-962.39999999999998" y="105.69715142428787"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BLs-F8-R8S">
@@ -114,6 +162,7 @@
     </scenes>
     <resources>
         <image name="repeat" catalog="system" width="128" height="98"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
